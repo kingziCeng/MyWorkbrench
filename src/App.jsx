@@ -17,6 +17,12 @@ function App() {
               <div width={ 90 } style={{ textAlign: 'center', flexGrow: '2' }}>
                 <span>工作台</span>
               </div>
+              <span style= {{ color: 'white', marginRight: '10px' }}>
+              {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+                className: 'trigger',
+                onClick: () => setCollapsed(!collapsed),
+              })}
+            </span>
           </div>
           <Menu
             mode="inline"
@@ -40,13 +46,7 @@ function App() {
           />
         </Sider>
         <Layout>
-          <Header style={{ display: 'flex', paddingInline: '10px' }}>
-            <span style= {{ color: 'white', marginRight: '10px' }}>
-              {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-                className: 'trigger',
-                onClick: () => setCollapsed(!collapsed),
-              })}
-            </span>
+          <Header style={{ paddingInline: '10px' }}>
             <Menu
               theme="dark"
               mode="horizontal"
