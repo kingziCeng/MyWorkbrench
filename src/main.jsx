@@ -3,16 +3,10 @@ import ReactDOM from 'react-dom/client'
 import 'antd/dist/reset.css'
 import App from './App'
 import './index.css'
-import { ConfigProvider } from 'antd'
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <ConfigProvider theme={{
-      token: {
-        colorPrimary: '#2123bf'
-      }
-    }}>
+    <BrowserRouter>
       <App />
-    </ConfigProvider>
-  </React.StrictMode>
+    </BrowserRouter>
 )
